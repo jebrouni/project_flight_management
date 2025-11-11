@@ -1,6 +1,6 @@
  Flight Management System
 
-A Spring Boot–based backend application for managing flight inventory with **JWT authentication**, **role-based authorization**, and **H2 flight database** for fast development and testing.
+A Spring Boot–based backend application for managing flight inventory with **JWT authentication**, **role-based authorization**, and **H2 In-Memory database** for fast development and testing.
 
 ---
 
