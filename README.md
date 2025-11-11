@@ -1,87 +1,127 @@
-# Flight Management System
+ Flight Management System
 
-## Overview
-An internal Tickets Flight Management System to centralize the management of Flights data.
+A Spring Boot–based backend application for managing flight inventory with **JWT authentication**, **role-based authorization**, and **H2 flight database** for fast development and testing.
 
-~~## Tech Stack
-- Backend: Java 17, Spring Boot
-- Database: H2
-- Security: JWT Authentication
-- Testing: JUnit, Mockito~~
+---
 
-## Features
-- User Role-Based Access Control (ADMINISTRATOR, USER)
-- Flight CRUD Operations
-- Search
-- Secure Authentication
+ Features
 
-## Project Structure
-```
-ticket-managment-system/
+- **JWT Authentication** – Secure token-based authentication and authorization  
+- **Role-Based Access Control** – Separate privileges for **Admin** and **User** roles  
+- **Flight Management** – CRUD operations for managing flight inventory  
+- **In-Memory Database (H2)** – Simple and fast testing environment  
+- **Input Validation** – Strong validation for IATA codes and flight data  
+- **REST API Documentation** – Auto-generated via Swagger UI  
+
+---
+
+## 🧰 Technology Stack
+
+| Layer | Technologies |
+|-------|---------------|
+| Language | **Java 17** |
+| Framework | **Spring Boot 3.5.7** |
+| Security | **Spring Security with JWT** |
+| Data Access | **Spring Data JPA** |
+| Database | **H2  Database** |
+| Build Tool | **Maven 3.8+** |
+| Utilities | **Lombok** |
+
+---
+
+Project Structure
+
+flight-management-system/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/airxelerate/flight_managment/
-│   │   │       ├── config/
-│   │   │       ├── controllers/
-│   │   │       ├── dtos/
-│   │   │       ├── entities/
-│   │   │       ├── enums/
-│   │   │       ├── Exceptions/
-│   │   │       ├── repositories/
-│   │   │       ├── security/
-│   │   │       ├── services/
-│   │   │       │   ├── impl/
-│   │   │       └── ui/
-│   │   └── resources/
-│   └── test/
-├── docs/
+│ ├── main/
+│ │ ├── java/
+│ │ │ └── com/airxelerate/flight_management/
+│ │ │ ├── config/
+│ │ │ ├── controllers/
+│ │ │ ├── dtos/
+│ │ │ ├── entities/
+│ │ │ ├── enums/
+│ │ │ ├── exceptions/
+│ │ │ ├── repositories/
+│ │ │ ├── security/
+│ │ │ ├── services/
+│ │ │ │ └── impl/
+│ │ │ 
+│ │ └── resources/
+│ └── test/
+├── 
 └── README.md
-```
 
-## Prerequisites
-- JDK 17
-- Maven 3.8+
-- H2 database
 
-## Setup and Installation
-1. Clone the repository
+
+---
+
+Prerequisites
+
+Make sure you have the following installed:
+
+- **JDK 17**
+- **Maven 3.8+**
+
+
+---
+
+##  Setup and Installation
+
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/s1syph/flight-managment.git
-   ```
+   git clone https://github.com/jebrouni/project_flight_management.git
+   cd project_flight_management
+2. Build the project
+mvn clean install
 
-3. Build the project
-   ```bash
-   mvn clean install
-   ```
+3.Run the application
+mvn spring-boot:run
 
-4. Run the application
-   ```bash
-   mvn spring-boot:run
-   ```
 
-## Default Users
-- USER:
-    - Username: user
-    - Password: 123
-- ADMINISTRATOR:
-    - Username: admin
-    - Password: 123
+Access the application
+API base URL: http://localhost:8080/api/flight
 
-## API Documentation
-The REST API documentation is available at `/swagger-ui.html` when running the application.
+Swagger UI: http://localhost:8080/swagger-ui.html
 
-## Testing
-Run tests using:
-```bash
-mvn test              # Unit tests
-mvn verify            # Integration tests
-mvn test jacoco:report # Coverage report
-```
+Default Users
+===> for User :
+username : user
+password : 2025
+===> for Admin:
+username : admin
+password : 2025
 
-## Contributing
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+== Admin users can add, or delete flights.
+==Regular users can only view flight data.
+
+ API Documentation
+Once the application is running, open your browser and go to:
+http://localhost:8080/swagger-ui.html
+
+You can explore all available endpoints there.
+
+Testing
+Run the tests with Maven:
+
+mvn test
+This will execute all unit and integration tests.
+
+ Contributing
+ 
+Fork the repository
+Create a new feature branch
+git checkout -b feature/your-feature-name
+Commit your changes
+git commit -m "Add your feature"
+Push to your branch
+
+git push origin feature/your-feature-name
+Create a Pull Request on GitHub 🎉
+
+📝 License
+This project is open-source and available under the MIT License.
+
+Author: Soufian Eljebrouni
+Version: 1.0.0
+Date: 2025
