@@ -1,25 +1,23 @@
-# project_flight_management
-A Spring Boot REST API for managing airline flight inventory with JWT-based authentication and role-based authorization.
-Features
+# Flight Management System
 
-JWT Authentication: Secure token-based authentication
-Role-Based Authorization: Administrator and User roles with different privileges
-Flight Management: CRUD operations for flight inventory
-In-Memory Database: H2 database for easy testing and development
-Input Validation: Comprehensive validation for IATA codes and flight data
+## Overview
+An internal Tickets Flight Management System to centralize the management of Flights data.
 
-Technology Stack
+~~## Tech Stack
+- Backend: Java 17, Spring Boot
+- Database: H2
+- Security: JWT Authentication
+- Testing: JUnit, Mockito~~
 
-Spring Boot 3.5.7
-Spring Security with JWT
-Spring Data JPA
-H2 Database
-Maven
-Java 17
-Lombok
+## Features
+- User Role-Based Access Control (ADMINISTRATOR, USER)
+- Flight CRUD Operations
+- Search
+- Secure Authentication
 
-Project Structure
-src/main/java/comcom/airxelerate/management_flight_api
+## Project Structure
+```
+ticket-managment-system/
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -39,27 +37,51 @@ src/main/java/comcom/airxelerate/management_flight_api
 │   └── test/
 ├── docs/
 └── README.md
-Getting Started
-Prerequisites
+```
 
-Java 17 or higher
-Maven 3.6 or higher
+## Prerequisites
+- JDK 17
+- Maven 3.8+
+- H2 database
 
-Installation
+## Setup and Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/s1syph/flight-managment.git
+   ```
 
-Clone the repository or extract the files
-Navigate to the project directory
-Build the project:
-bash   mvn clean install
-Run the application:
-bash   mvn spring-boot:run
-The application will start on http://localhost:8080
-Default Users
-==>USER
-Username: user
-Password: 2025
-==> ADMINISTRATOR:
-Username: admin
-Password: 2025
-API Documentation
-The REST API documentation is available at /swagger-ui.html when running the application.
+3. Build the project
+   ```bash
+   mvn clean install
+   ```
+
+4. Run the application
+   ```bash
+   mvn spring-boot:run
+   ```
+
+## Default Users
+- USER:
+    - Username: user
+    - Password: 123
+- ADMINISTRATOR:
+    - Username: admin
+    - Password: 123
+
+## API Documentation
+The REST API documentation is available at `/swagger-ui.html` when running the application.
+
+## Testing
+Run tests using:
+```bash
+mvn test              # Unit tests
+mvn verify            # Integration tests
+mvn test jacoco:report # Coverage report
+```
+
+## Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request

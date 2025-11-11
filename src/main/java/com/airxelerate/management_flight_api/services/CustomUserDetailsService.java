@@ -1,4 +1,4 @@
-package com.airxelerate.management_flight_api.security;
+package com.airxelerate.management_flight_api.services;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.airxelerate.management_flight_api.exceptions.UserNotFoundException;
 import com.airxelerate.management_flight_api.models.User;
 import com.airxelerate.management_flight_api.repositories.UserRepository;
+import com.airxelerate.management_flight_api.security.CustomUserDetails;
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 	private final UserRepository userRepository;

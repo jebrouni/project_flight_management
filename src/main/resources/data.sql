@@ -18,7 +18,7 @@ INSERT INTO USERS (username, password, role) VALUES
 
 
 -- Create Flight table if it doesn't exist
-CREATE TABLE IF NOT EXISTS FLIGHT (
+CREATE TABLE IF NOT EXISTS FLIGHTS (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     carrier_code VARCHAR(2),
     flight_number VARCHAR(4),
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS FLIGHT (
 );
 
 -- Insert sample flights
-INSERT INTO FLIGHT (carrier_code, flight_number, flight_date, origin, destination) VALUES
+INSERT INTO FLIGHTS (carrier_code, flight_number, flight_date, origin, destination) VALUES
     ('AL', '2025', '2025-11-11', 'ESP', 'PLM'),
     ('BA', '2026', '2025-11-12', 'BEL', 'LAM'),
     ('AF', '2027', '2025-11-13', 'CAN', 'DXC'),

@@ -21,6 +21,13 @@ import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
+
+/**
+ * REST Controller for managing flight tickets*
+ * @author EL Jebrouni soufiane 
+ * @version 1.0
+ * @since 2024-02-25
+ */
 @RestController
 @RequestMapping("/api/flight")
 @Tag(name = "Flight Management api", description = "Operations related to flight management")
